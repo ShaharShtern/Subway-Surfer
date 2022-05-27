@@ -8,6 +8,9 @@ public class MovementScript : MonoBehaviour
     public Vector3 direction;
     public float jumpForce;
     public float gravityForce;
+    private int currentLane;
+    public float laneDistance;
+    public float laneSwitchSpeed;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -15,11 +18,26 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
-        direction.y += gravityForce * Time.fixedDeltaTime;
-        if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
+        if (characterController.isGrounded)
         {
-            direction.y = jumpForce;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                direction.y = jumpForce;
+            }
         }
+        else
+        {
+            direction.y += gravityForce * Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentLane = Mathf.Clamp(currentLane - 1, -1, 1);
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentLane = Mathf.Clamp(currentLane + 1, -1, 1);
+        }
+        direction.x = (-transform.position.x + currentLane * laneDistance) * laneSwitchSpeed;
     }
     private void FixedUpdate()
     {

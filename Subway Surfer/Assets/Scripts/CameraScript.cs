@@ -5,14 +5,14 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public Transform player;
-    Vector3 offset;
+    float offset;
     void Start()
     {
-        offset = transform.position - player.position;
+        offset = transform.position.z - player.position.z;
     }
 
     void Update()
     {
-        transform.position = player.position + offset;
+        transform.position = new Vector3 (transform.position.x, transform.position.y, player.position.z + offset);
     }
 }
