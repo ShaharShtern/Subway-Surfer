@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuCanvas : MonoBehaviour
 {
     public GameObject playerRef;
-    public Button startButton;
+    public GameObject gameOverMenu;
     void Start()
     {
         
@@ -19,6 +20,16 @@ public class MenuCanvas : MonoBehaviour
     }
     public void StartGame()
     {
-        playerRef.GetComponent<MovementScript>().enabled = true;
+        //playerRef.GetComponent<MovementScript>().enabled = true;
+        playerRef.GetComponent<MovementScript>().StartRunning();
+    }
+    public void StartOver()
+    {
+        playerRef.GetComponent<MovementScript>().enabled = false;
+        gameOverMenu.SetActive(enabled);
+    }
+    public void Replay()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
