@@ -13,4 +13,8 @@ public class GameManager : MonoBehaviour
             menuCanvas.StartOver();
         }
     }
+    //public void AddToScore()
+   // {
+
+   // }
 }

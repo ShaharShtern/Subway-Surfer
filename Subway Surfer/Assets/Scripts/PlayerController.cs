@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private bool isRunning=false;
 
@@ -14,12 +14,14 @@ public class MovementScript : MonoBehaviour
     public float laneDistance;
     public float laneSwitchSpeed;
     public SwipeDetector swipeDetector;
-
+    [SerializeField] private GameManager gameManager;
     private Animator animator;
-    void Start()
+    private PlayerSound playerSound;
+    void Awake()
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        playerSound = GetComponent<PlayerSound>();
     }
 
     void Update()
@@ -32,6 +34,8 @@ public class MovementScript : MonoBehaviour
             {
                 direction.y = jumpForce;
                 animator.SetTrigger("Jump");
+
+                playerSound.PlayJumpSound();
             }
         }
         else
@@ -59,4 +63,10 @@ public class MovementScript : MonoBehaviour
         animator.SetTrigger("StartRunning");
     }
    
+    public void StopRunning ()
+    {
+        isRunning = false;
+
+    }
+    
 }

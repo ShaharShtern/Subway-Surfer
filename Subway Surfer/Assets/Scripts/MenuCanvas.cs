@@ -21,11 +21,11 @@ public class MenuCanvas : MonoBehaviour
     public void StartGame()
     {
         //playerRef.GetComponent<MovementScript>().enabled = true;
-        playerRef.GetComponent<MovementScript>().StartRunning();
+        playerRef.GetComponent<PlayerController>().StartRunning();
     }
     public void StartOver()
     {
-        playerRef.GetComponent<MovementScript>().enabled = false;
+        playerRef.GetComponent<PlayerController>().enabled = false;
         gameOverMenu.SetActive(enabled);
     }
     public void Replay()
