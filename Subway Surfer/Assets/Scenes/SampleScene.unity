@@ -1436,11 +1436,14 @@ MonoBehaviour:
   - {fileID: 2938838066777562063, guid: 6c1cd5b021b04b4498e3c4b4149b6045, type: 3}
   - {fileID: 1656416127806146648, guid: 3c221894442872d428491ad92d1af3f5, type: 3}
   - {fileID: 4021921499445130812, guid: 643f7085215f52f4ebb4095a9c3682eb, type: 3}
-  numberOfTiles: 5
-  tileLength: 20
+  - {fileID: 4055744601108606412, guid: 1d0879081fb2cce45926e15e59e55226, type: 3}
+  - {fileID: 2938838066777562063, guid: 6c1cd5b021b04b4498e3c4b4149b6045, type: 3}
+  - {fileID: 1656416127806146648, guid: 3c221894442872d428491ad92d1af3f5, type: 3}
+  numberOfTiles: 10
+  tileLength: 10
   zSpawnPosition: 0
   player: {fileID: 730286781}
-  distanceBetweenTiles: 120
+  distanceBetweenTiles: 60
 --- !u!4 &1540477871
 Transform:
   m_ObjectHideFlags: 0
@@ -1834,7 +1837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 730286776, guid: ebf2c467cbcbb9645a38515cb5d8a34d, type: 3}
       propertyPath: direction.z
-      value: 10
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 730286776, guid: ebf2c467cbcbb9645a38515cb5d8a34d, type: 3}
       propertyPath: gameManager

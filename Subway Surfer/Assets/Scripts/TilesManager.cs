@@ -18,7 +18,7 @@ public class TilesManager : MonoBehaviour
         SpawnTile(0);
         for (int i = 0; i < numberOfTiles; i++)
         {
-            int index = Random.Range(0, tilePrefabs.Length);
+            int index = Random.Range(1, tilePrefabs.Length);
             SpawnTile(index);
         }
     }

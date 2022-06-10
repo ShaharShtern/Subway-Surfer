@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            if (Input.GetKeyDown("w") || swipeDetector.swipeUp)
+            if (Input.GetKey("w") || swipeDetector.swipeUp)
             {
                 direction.y = jumpForce;
                 animator.SetTrigger("Jump");
