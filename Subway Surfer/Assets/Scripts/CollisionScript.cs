@@ -6,6 +6,7 @@ public class CollisionScript : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     private PlayerSound playerSound;
+    public int coins;
 
     private void Awake()
     {
@@ -26,6 +27,8 @@ public class CollisionScript : MonoBehaviour
             Destroy(other.gameObject);
 
             playerSound.PlayCoinSound();
+
+            coins++;
         }
     }
 }
