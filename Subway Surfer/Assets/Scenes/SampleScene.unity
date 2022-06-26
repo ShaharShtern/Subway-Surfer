@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6e00f8b39315691449f256740a5cb862, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.673305, g: 0.5181906, b: 0.34589565, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1794,6 +1794,8 @@ MonoBehaviour:
   - {fileID: 1656416127806146648, guid: 3c221894442872d428491ad92d1af3f5, type: 3}
   - {fileID: 4021921499445130812, guid: 643f7085215f52f4ebb4095a9c3682eb, type: 3}
   - {fileID: 4055744601108606412, guid: 1d0879081fb2cce45926e15e59e55226, type: 3}
+  - {fileID: 7440444287405685305, guid: 150c282268b2fd3478304b4f598fb6ac, type: 3}
+  - {fileID: 4749427634160034459, guid: 0915b80140e4a174681d05f3fe8092f2, type: 3}
   numberOfTiles: 10
   tileLength: 10
   zSpawnPosition: 0
