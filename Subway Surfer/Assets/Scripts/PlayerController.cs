@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     private Animator animator;
     private PlayerSound playerSound;
+    [SerializeField] private bool isJumping;
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -32,16 +33,21 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey("w") || swipeDetector.swipeUp)
             {
-                direction.y = jumpForce;
-                animator.SetTrigger("Jump");
-
-                playerSound.PlayJumpSound();
+                if (isJumping==false)
+                {
+                    playerSound.PlayJumpSound();
+                    isJumping = true;
+                    direction.y = jumpForce;
+                    animator.SetTrigger("Jump");
+                }
             }
         }
         else
         {
             direction.y += gravityForce * Time.deltaTime;
         }
+        if (1.1f < transform.position.y && transform.position.y < 1.5f)
+            isJumping = false;
         if (Input.GetKeyDown("a")|| swipeDetector.swipeLeft)
         {
             currentLane = Mathf.Clamp(currentLane - 1, -1, 1);
@@ -51,6 +57,7 @@ public class PlayerController : MonoBehaviour
             currentLane = Mathf.Clamp(currentLane + 1, -1, 1);
         }
         direction.x = (-transform.position.x + currentLane * laneDistance) * laneSwitchSpeed;
+        
     }
     private void FixedUpdate()
     {

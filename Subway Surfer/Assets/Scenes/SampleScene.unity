@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -462,8 +462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a5e5ef3dc44cb48a9ab8199b87ef73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSound: {fileID: 8300000, guid: 697573ee142d2ea4e8492b6afb91c8b3, type: 3}
-  coinSound: {fileID: 8300000, guid: ae85e4bc26743bd4195849ec49915865, type: 3}
+  jumpSound: {fileID: 8300000, guid: 7e2cc15521a4dbf4eb2b727be26dc5eb, type: 3}
+  coinSound: {fileID: 8300000, guid: 859f468c475256447a4efb0fde31e8d2, type: 3}
+  defeatSound: {fileID: 8300000, guid: 0eadf127f936bf747adeb612a7408839, type: 3}
 --- !u!1 &398260237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1359,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -286, y: 785}
-  m_SizeDelta: {x: 500, y: 300}
+  m_SizeDelta: {x: 634.2, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1021812092
 MonoBehaviour:
@@ -1373,7 +1374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1944,7 +1945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4377358, g: 0.6555605, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2071,7 +2072,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b85f5cd48a64724686857c9fb13fa52, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 96125a5201902344b93e117cd0aaf206, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

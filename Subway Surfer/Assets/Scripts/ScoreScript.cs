@@ -19,8 +19,8 @@ public class ScoreScript : MonoBehaviour
     {
         int playerPos = Mathf.FloorToInt(player.transform.position.z);
         playerScore = playerPos * 10;
-        scoreText.text ="Score:" + playerScore.ToString();
+        scoreText.text ="Score: " + playerScore.ToString();
 
-        coinsText.text = "Coins:" + player.GetComponent<CollisionScript>().coins;
+        coinsText.text = "Coins: " + player.GetComponent<CollisionScript>().coins;
     }
 }
