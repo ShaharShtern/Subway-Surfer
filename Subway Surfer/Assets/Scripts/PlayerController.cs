@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     private Animator animator;
     private PlayerSound playerSound;
-    [SerializeField] private bool isJumping;
+    private bool isJumping;
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             direction.y += gravityForce * Time.deltaTime;
         }
-        if (1.1f < transform.position.y && transform.position.y < 1.5f)
+        if (1.2f < transform.position.y)
             isJumping = false;
         if (Input.GetKeyDown("a")|| swipeDetector.swipeLeft)
         {
