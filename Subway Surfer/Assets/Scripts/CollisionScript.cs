@@ -7,10 +7,12 @@ public class CollisionScript : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     private PlayerSound playerSound;
     [HideInInspector] public int coins;
+    private Animator animator;
 
     private void Awake()
     {
         playerSound = GetComponent<PlayerSound>();
+        animator = GetComponentInChildren<Animator>();
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -18,6 +20,7 @@ public class CollisionScript : MonoBehaviour
         {
             gameManager.isGameOver = true;
             playerSound.PlayDefeatSound();
+            animator.SetTrigger("Death");
         }
         
     }
